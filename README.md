@@ -36,7 +36,7 @@ sudo update-alternatives --config gcc
 sudo update-alternatives --config g++
 ```
 
-4. Create GCC version switching script
+4. Create GCC version switching script  
 Paste the following into some file, e.g. _~/sw_gcc.sh_:
 ```shell
 #!/bin/sh
@@ -55,12 +55,12 @@ Then turn on its executable flag:
 ```shell
 chmod +x sw_gcc.sh
 ```
-To switch the current GCC version, run  
+To switch the current GCC version, e.g. to 7, run:  
 ```shell
 sudo ~/sw_gcc.sh 7
 ```
 
-5. Install valgrind (check the latest valgrind version and update it in the script below)
+5. Install _valgrind_ (check the latest _valgrind_ version and update it in the script below)
 ```shell
 wget http://valgrind.org/downloads/valgrind-3.14.0.tar.bz2
 tar -xvjf valgrind-3.14.0.tar.bz2
@@ -105,11 +105,11 @@ Install the required node.js version
 nvm install 10.15.1
 ```
 
-8. Install latest Boost (currently, 1.69.0)
+8. Install latest Boost (currently, 1.70.0)
 ```shell
-wget -O boost_1_69_0.tar.gz https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz/download
-tar xzvf boost_1_69_0.tar.gz
-cd boost_1_69_0/
+wget -O boost_1_70_0.tar.gz https://sourceforge.net/projects/boost/files/boost/1.70.0/boost_1_70_0.tar.gz/download
+tar xzvf boost_1_70_0.tar.gz
+cd boost_1_70_0/
 ./bootstrap.sh --prefix=/usr/local
 ./b2 -j 4
 sudo ./b2 install
